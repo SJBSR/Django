@@ -3,7 +3,7 @@
 {% block content %}
 
   <form action="{% url 'accounts:register' %}" method='post'>
-    {% csfr_token %}
+    {% csrf_token %}
     {{ form.as_div }}
 
     <button name="submit">Register</button>
